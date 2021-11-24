@@ -1,0 +1,18 @@
+def out_prime(lst):
+    print('Please input index from range 0-9:')
+    i = input()
+    try:
+        i=int(i)
+    except ValueError:
+        print('It is not an index.')
+        return (out_prime(lst))
+    try:
+        print(lst[i])
+        return 0
+    except IndexError:
+        print('Index out of range.')
+        return out_prime(lst)
+
+
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+out_prime(primes)
